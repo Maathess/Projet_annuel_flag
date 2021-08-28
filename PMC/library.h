@@ -1,6 +1,6 @@
-#ifndef MLP3_LIBRARY_H
-#define MLP3_LIBRARY_H
+#ifndef PMC_LIBRARY_H
+#define PMC_LIBRARY_H
 
 void hello();
 
-#endif //MLP3_LIBRARY_H
+#endif //PMC_LIBRARY_H
