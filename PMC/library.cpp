@@ -154,3 +154,7 @@ DLLEXPORT void train_regression_stochastic_gradient_backpropagation_mlp_model(ML
 DLLEXPORT int getXSize(MLP *model) {
     return int((model->X[(model->X.size()) - 1].size()) - 1);
 }
+
+DLLEXPORT void destroy_MLP(MLP *model){
+    delete[] model;
+}
