@@ -106,24 +106,24 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named PMC1
+# Target rules for targets named PMC2
 
 # Build rule for target.
-PMC1: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) PMC1
-.PHONY : PMC1
+PMC2: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) PMC2
+.PHONY : PMC2
 
 # fast build rule for target.
-PMC1\fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\PMC1.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\PMC1.dir\build
-.PHONY : PMC1\fast
+PMC2\fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\PMC2.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\PMC2.dir\build
+.PHONY : PMC2\fast
 
 library.obj: library.cpp.obj
 .PHONY : library.obj
 
 # target to build an object file
 library.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\PMC1.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\PMC1.dir\library.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\PMC2.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\PMC2.dir\library.cpp.obj
 .PHONY : library.cpp.obj
 
 library.i: library.cpp.i
@@ -131,7 +131,7 @@ library.i: library.cpp.i
 
 # target to preprocess a source file
 library.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\PMC1.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\PMC1.dir\library.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\PMC2.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\PMC2.dir\library.cpp.i
 .PHONY : library.cpp.i
 
 library.s: library.cpp.s
@@ -139,7 +139,7 @@ library.s: library.cpp.s
 
 # target to generate assembly for a file
 library.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\PMC1.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\PMC1.dir\library.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\PMC2.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\PMC2.dir\library.cpp.s
 .PHONY : library.cpp.s
 
 # Help Target
@@ -150,7 +150,7 @@ help:
 	@echo ... depend
 	@echo ... edit_cache
 	@echo ... rebuild_cache
-	@echo ... PMC1
+	@echo ... PMC2
 	@echo ... library.obj
 	@echo ... library.i
 	@echo ... library.s

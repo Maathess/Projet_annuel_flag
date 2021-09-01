@@ -156,5 +156,5 @@ DLLEXPORT int getXSize(MLP *model) {
 }
 
 DLLEXPORT void destroy_MLP(MLP *model){
-    delete[] model;
+    free(model);
 }
