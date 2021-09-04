@@ -17,6 +17,7 @@ DLLEXPORT typedef struct MLP_m {
     std::vector<std::vector<float>> X;
     std::vector<std::vector<float>> deltas;
 
+
     void forward_pass(const float *sample_inputs, bool is_classification) {
         unsigned long L = d.size() - 1;
         for (int j = 1; j < (d[0] + 1); j++) {
@@ -156,5 +157,9 @@ DLLEXPORT int getXSize(MLP *model) {
 }
 
 DLLEXPORT void destroy_MLP(MLP *model){
+    model->X.clear();
+    model->d.clear();
+    model->deltas.clear();
+    model->W.clear();
     free(model);
 }

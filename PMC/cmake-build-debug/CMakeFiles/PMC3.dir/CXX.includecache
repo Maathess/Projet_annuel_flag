@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/Maathess/Desktop/Projet_annuel_flag/PMC/library.cpp
+cstdio
+-
+cstdlib
+-
+fstream
+-
+vector
+-
+ctime
+-
+cmath
+-
+
