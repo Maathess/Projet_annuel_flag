@@ -8,7 +8,7 @@ Flag_predictor va te permettre de tester les différents modèles issu de diffé
 ## Les technologies :
 ```
 C++
-Python 3.8 (selenium, matplotlib, streamlit, pandas, request, numpy)
+Python 3.8 (selenium, ctypes, numpy, PIL, matplotlib, sklearn, streamlit)
 ```
 ## Installation
 Il vous suffit de modifier le chemin d'accès au différents fichiers (.dll, .jpg, etc..)
