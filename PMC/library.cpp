@@ -4,6 +4,12 @@
 #include <vector>
 #include <ctime>
 #include <cmath>
+#include <iomanip>
+#include <iostream>
+#include "nlohmann/json.hpp"
+/*#include "cereal-master/include/cereal/types/vector.hpp"
+#include "cereal-master/include/cereal/types/string.hpp"*/
+using json = nlohmann::json;
 
 #if defined(WIN32) || defined(_WIN32) || defined(__WIN32__) || defined(__NT__)
 #define DLLEXPORT extern "C" __declspec(dllexport)
@@ -11,12 +17,21 @@
 #define DLLEXPORT
 #endif
 
-DLLEXPORT typedef struct MLP_m {
+typedef struct MLP_m {
     std::vector<std::vector<std::vector<float>>> W;
     std::vector<int> d;
     std::vector<std::vector<float>> X;
     std::vector<std::vector<float>> deltas;
 
+    /*template<class Archive> void save_MLP(Archive &archive)
+    {
+        archive( W, d, X, deltas );
+    }
+
+    template<class Archive> void load_MLP(Archive & archive)
+    {
+        archive( W, d, X, deltas );
+    }*/
 
     void forward_pass(const float *sample_inputs, bool is_classification) {
         unsigned long L = d.size() - 1;
@@ -83,6 +98,7 @@ DLLEXPORT typedef struct MLP_m {
             }
         }
     }
+
 }MLP;
 
 DLLEXPORT MLP *create_mlp_model(int *npl, int npl_size) {
@@ -156,10 +172,16 @@ DLLEXPORT int getXSize(MLP *model) {
     return int((model->X[(model->X.size()) - 1].size()) - 1);
 }
 
+DLLEXPORT void save_MLP(const std::string& output_name, MLP *model){
+    std::ofstream file("./Models/"+output_name+".json");
+    file << std::setw(4) << model << std::endl;
+}
+
 DLLEXPORT void destroy_MLP(MLP *model){
     model->X.clear();
-    model->d.clear();
+//model->d.clear();
     model->deltas.clear();
     model->W.clear();
     free(model);
+    std::cout << "Model deleted";
 }
