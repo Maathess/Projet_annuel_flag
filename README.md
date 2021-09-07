@@ -14,8 +14,10 @@ Python 3.8 (selenium, ctypes, numpy, PIL, matplotlib, sklearn, streamlit)
 Il vous suffit de modifier le chemin d'accès au différents fichiers (.dll, .jpg, etc..)
 
 ### Lancer application en local
-
 Dans le terminal "Streamlit run .\app.py" et se rendre à l'url indiquer dans la console
+
+### Utiliser la prédiction
+La pipeline entre l'app et les modèles n'étant pas encore réaliser à ce jour, si vous souhaitez utiliser les méthodes de prédictions de chaque modèles, veuillez vous rendre sur le notebook "Trainer.ipynb" (Entraînement des modèles + Prédictions)
 
 ### Utilisation de la prédiction :
 Fonctionne pour le moment sur 3 classes de drapeau :
