@@ -22,7 +22,7 @@ st.markdown('By <a href="https://github.com/Maathess/Projet_annuel_flag" target=
 
 st.write("This project is about predicting flag using trained MLP models")
 
-file_data = st.file_uploader("Select an image", type=["jpg"])
+file_data = st.file_uploader("Select an image")
 
 models = ["Sans couche cachée", "1 couche cachée, 8 neurones", "1 couche cachée, 32 neurones", "2 couches cachées, 32 neurones"]
 option = st.selectbox(
