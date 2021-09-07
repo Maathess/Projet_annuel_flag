@@ -179,7 +179,7 @@ DLLEXPORT void save_MLP(const std::string& output_name, MLP *model){
 
 DLLEXPORT void destroy_MLP(MLP *model){
     model->X.clear();
-//model->d.clear();
+    model->d.clear();
     model->deltas.clear();
     model->W.clear();
     free(model);
